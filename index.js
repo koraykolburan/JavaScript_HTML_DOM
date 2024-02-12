@@ -31,6 +31,7 @@ c1.appendChild(t2);
 const s1 = document.createElement("span");
 const t3 = document.createTextNode("this is .\"HTMLImageElement\">>>>> ");
 
+
 // let's write some CSS for our code
 
 
