@@ -1,2 +1,2 @@
-# JavaScript_HTML_DOM
+# JavaScript_HTML_DOM_Web_APIs
  The Browser Environment: the DOM
