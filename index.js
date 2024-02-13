@@ -17,6 +17,7 @@ div1.appendChild(article2);
 //creating a H1 and P tag
 const head1 = document.createElement("h1");
 const h1 = document.createTextNode("The Browser Environment: JavaScript HTML DOM");
+head1.style.color = "#e8eaea";
 const p1 = document.createElement("p");
 const t1 = document.createTextNode("You can click on the 'inspect' attributes on your page(chrome - console) and you can reach these below:");
 article1.appendChild(head1);
@@ -51,7 +52,8 @@ const hr1 = document.createElement("HR");
 article1.appendChild(hr1);
 
 const head2 = document.createElement("h2");
-const h2 = document.createTextNode("Let's Create some HTML using JavaScript")
+const h2 = document.createTextNode("Let's Create some HTML using JavaScript");
+head2.style.color = "#e8eaea";
 head2.appendChild(h2);
 article2.appendChild(head2);
 
@@ -81,6 +83,7 @@ article2.appendChild(c4);
 const head3 = document.createElement("h3");
 const h3 = document.createTextNode("Create a MENU with DOM & JavaScript");
 head3.style.fontStyle = "italic";
+head3.style.color = "#76bc53";
 head3.appendChild(h3);
 article2.appendChild(head3);
 
