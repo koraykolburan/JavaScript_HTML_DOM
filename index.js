@@ -1,5 +1,9 @@
 //let's create this page with JavaScript HTML DOM 
 
+//our first note/comment about this Web page
+const comment1 = document.createComment("HTML DOM")
+document.body.appendChild(comment1);
+
 //creating a DIV with a class
 const div1 = document.createElement("div");
 div1.classList.add("content");
@@ -27,14 +31,35 @@ article1.appendChild(p1);
 
 //creating CODE & SPAN & ANCHOR tags
 const c1 = document.createElement("code");
-const t2 = document.createTextNode("\"document.head\" , \"document.body\" , \"document.querySelector(\"figure.(class or id name) > img\");");
+const t2 = document.createTextNode("\"document.head\"");
+
+const br3 = document.createElement("BR");
+const c5 = document.createElement("code");
+const t9 = document.createTextNode("\"document.body\"");
+
+const br5 = document.createElement("BR");
+const s1 = document.createElement("span");
+const t3 = document.createTextNode(" this is the \"HTMLImageElement\": ");
+
+const br4 = document.createElement("BR");
+const c6 = document.createElement("code");
+const t10 = document.createTextNode("\"document.querySelector(\"figure.(class or id name) > img\");");
+const br6 = document.createElement("BR");
+
+
 article1.appendChild(c1);
 c1.appendChild(t2);
-
-const s1 = document.createElement("span");
-const t3 = document.createTextNode(" this is the \"HTMLImageElement\" >>>>> ");
+article1.appendChild(br3);
+article1.appendChild(c5);
+c5.appendChild(t9);
+article1.appendChild(br4);
 article1.appendChild(s1);
 s1.appendChild(t3);
+article1.appendChild(c6);
+c6.appendChild(t10);
+article1.appendChild(br5);
+article1.appendChild(br6);
+
 
 const a1 = document.createElement("A");
 a1.setAttribute("href", "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement",);
@@ -63,8 +88,11 @@ const c3 = document.createElement("code");
 const t7 = document.createTextNode("\"document.createTextNode(\"text\")");
 const c4 = document.createElement("code");
 const t8 = document.createTextNode("\"appendChild()\"");
+const c7 = document.createElement("code");
+const t11 = document.createTextNode("\"getElementsByTag(\"P or H1\")[0]\"");
 const br1 = document.createElement("BR");
 const br2 = document.createElement("BR");
+const br7 = document.createElement("BR");
 c2.appendChild(t6);
 article2.appendChild(c2);
 article2.appendChild(br1);
@@ -73,11 +101,16 @@ article2.appendChild(c3);
 article2.appendChild(br2);
 c4.appendChild(t8);
 article2.appendChild(c4);
+article2.appendChild(br7);
+c7.appendChild(t11);
+article2.appendChild(c7);
 
-
-// let's write some CSS for our code
-
-
+const p3 = document.createElement("p");
+const t12 = document.createTextNode("Remember: the \"getElementsByTagName()[2]\" works with indexes like these; [0],[1],[2],[3] . ");
+p3.appendChild(t12);
+article2.appendChild(p3);
+document.getElementsByTagName("p")[2].style.textDecorationLine = "underline";
+document.getElementsByTagName("p")[2].style.textDecorationStyle = "double";
 
 // -------------------------------------------------------- Create A Menu with DOM ---------------------------------
 const head3 = document.createElement("h3");
