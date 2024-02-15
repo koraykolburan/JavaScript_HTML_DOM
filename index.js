@@ -158,14 +158,41 @@ function createMenu ( items ) {
     
     //Iterate over the items and create one LI element for each item
     items.forEach(function(element, index, array){
-       let menuItem = document.createElement("li");
-       let textNode = document.createTextNode(element);
-       menuItem.appendChild(textNode);
-
-       menu.appendChild(menuItem);
+       let menuItemAnchor = document.createElement("A"); 
+       menuItemAnchor.setAttribute("href","#"); 
+       menuItemAnchor.target= "_blank"; 
+       let menuItem = document.createElement("li");  //Original
+       let textNode = document.createTextNode(element); //Original
+       menuItemAnchor.appendChild(textNode);    //Original
+       menuItem.appendChild(menuItemAnchor);   
+       
+       // some css
+       menuItemAnchor.style.textDecoration = "none";    
+       menuItemAnchor.style.color = "#fff"; 
+       menuItem.style.cssFloat = "left";    
+       menuItem.style.backgroundColor = "pink";     
+       menuItem.style.padding = "5px";  
+       menuItem.style.marginRight = "5px";  
+       menuItem.style.listStyleType = "none";   
+       menuItem.style.border = "1px solid black";   
+       menuItem.style.borderRadius = "12px";    
+       menu.appendChild(menuItem);  //Original
     })
     article2.appendChild(menu);
 }
 // Calling the function finally
 createMenu(technologies);
-//-------------------------------------------------------------------------------------------------
+
+// We can do this way, too
+
+const cars = ["Saab", "Volvo", "BMW", "Audi", "Tesla"];
+
+let text = "<ul>";
+cars.forEach(carsFunction); // we can use this, instead of "for loop" in here.
+text += "</ul>";
+
+function carsFunction(value){
+    text += "<li>" + value + "</li>";
+};
+
+//document.getElementById("").innerHTMl = text; 
