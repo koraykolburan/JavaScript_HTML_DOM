@@ -199,4 +199,7 @@ function carsFunction(value){
 
 //------------------------------------------- DOM Events --------------------------------------------------------
 
-//Event Bubling(bottom to top), Event Capturing(Top to bottom), Event Propagation
+//Event Bubling(bottom to top)(Almost exclusively will working with bubling), Event Capturing(Top to bottom), Event Propagation
+//Most of the time we focus mainly mouse, keyboard, form and UI events. However We can work with increases with the time as the browser becomes more and more JavaScript friendly.
+//Let's start How we can work with DOM Events and we'll write a script that react to the user interactive with our page elements.
+
