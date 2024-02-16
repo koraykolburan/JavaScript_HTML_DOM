@@ -185,7 +185,7 @@ createMenu(technologies);
 
 // We can do this way, too
 
-const cars = ["Saab", "Volvo", "BMW", "Audi", "Tesla"];
+/*const cars = ["Saab", "Volvo", "BMW", "Audi", "Tesla"];
 
 let text = "<ul>";
 cars.forEach(carsFunction); // we can use this, instead of "for loop" in here.
@@ -195,4 +195,8 @@ function carsFunction(value){
     text += "<li>" + value + "</li>";
 };
 
-//document.getElementById("").innerHTMl = text; 
+//document.getElementById("").innerHTMl = text; */
+
+//------------------------------------------- DOM Events --------------------------------------------------------
+
+//Event Bubling(bottom to top), Event Capturing(Top to bottom), Event Propagation
