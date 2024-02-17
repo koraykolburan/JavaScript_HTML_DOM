@@ -46,3 +46,7 @@ body, * {
 .cf {
     clear: both; /* Applying the "clear both" to this div will force the container contain everything inside of it even the floated element because of this div. */
 }
+
+.is-visible {
+    display: block;
+}
