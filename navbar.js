@@ -2,23 +2,24 @@
 //grab a reference to all the menu links
 let  $menuLinks = document.querySelectorAll(".menu-item > a"); // Selecting all anchors under the .menu-item
 
+function getInfoPanelFromElement(element){
+    let $infoPanel = element.parentNode.querySelector(".menu-item-info");
+    return $infoPanel;
+
+}
 
 function displayInfoPanelForElement(event){
     let $anchor = event.target;
-    let $infoPanel = $anchor.parentNode.querySelector(".menu-item-info");
-
-    //console.log($infoPanel);
-    // make the panel visible!
-    $infoPanel.classList.add("is-visible");
+    
+    //make the panel visible!
+    getInfoPanelFromElement($anchor).classList.add("is-visible");
 }
 
 function hideInfoPanelForElement(event){
     let $anchor = event.target;
-    let $infoPanel = $anchor.parentNode.querySelector(".menu-item-info");
 
-    //console.log($infoPanel);
     // make the panel hidden when the mouse out of it!
-    $infoPanel.classList.remove("is-visible");
+    getInfoPanelFromElement($anchor).classList.remove("is-visible");
 }
 
 // We cannot use forEach() function because this list is not an array. So we have to iterate explicitly on the list
