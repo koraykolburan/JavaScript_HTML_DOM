@@ -154,7 +154,7 @@ let technologies = ["HTML", "CSS", "JavaScript", "DOM"];
 
 function createMenu ( items ) {
     //Let's create a new element for containing the menu
-    let menu = document.createElement("ul");
+    let menu1 = document.createElement("ul");
     
     //Iterate over the items and create one LI element for each item
     items.forEach(function(element, index, array){
@@ -176,9 +176,9 @@ function createMenu ( items ) {
        menuItem.style.listStyleType = "none";   
        menuItem.style.border = "1px solid black";   
        menuItem.style.borderRadius = "12px";    
-       menu.appendChild(menuItem);  //Original
+       menu1.appendChild(menuItem);  //Original
     })
-    article2.appendChild(menu);
+    article2.appendChild(menu1);
 }
 // Calling the function finally
 createMenu(technologies);
@@ -196,10 +196,3 @@ function carsFunction(value){
 };
 
 //document.getElementById("").innerHTMl = text; */
-
-//------------------------------------------- DOM Events --------------------------------------------------------
-
-//Event Bubling(bottom to top)(Almost exclusively will working with bubling), Event Capturing(Top to bottom), Event Propagation
-//Most of the time we focus mainly mouse, keyboard, form and UI events. However We can work with increases with the time as the browser becomes more and more JavaScript friendly.
-//Let's start How we can work with DOM Events and we'll write a script that react to the user interactive with our page elements.
-

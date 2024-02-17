@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar with DOM Events</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+            <ul id="main-menu" class="menu">
+                <li class="menu-item">
+                    <a href="#">Home</a>
+                    <div class="menu-item-info">
+                        This is the Home menu
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#">About us</a>
+                    <div class="menu-item-info">
+                        This is the About us menu
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Contact us</a>
+                    <div class="menu-item-info">
+                        This is the Contact us menu
+                    </div>
+                </li>
+                <div class="cf"></div> <!-- Applying the "clear both" to this div will force the container contain everything inside of it even the floated element because of this div. -->
+            </ul>
+        </nav>
+    </header>
+
+    <script src="navbar.js"></script>
+</body>
+</html>
