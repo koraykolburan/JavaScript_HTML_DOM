@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        body {
+            background: grey;
+            color: rgb(239, 247, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .redHead {
+            border: 1px solid black;
+            background: #000;
+            border-radius: 12px;
+        }
+        .redHead:hover {
+            background: darkolivegreen ;
+            border: 1px outset darkolivegreen;
+            cursor: pointer;
+        }
+        button {
+            border-radius: 12px;
+            padding: 10px;
+            margin: 5px;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: darkolivegreen;
+            color: white;
+        }
+        #date1 {
+            font-style: italic;
+            color: pink;
+        }
+    </style>
+</head>
+<body onload="checkCookies()">
+    <h1>DOM Events</h1>
+    <button onclick="myFunction()">Click Here!</button>
+    <button onclick="myFunction2()">Delete the Paragraph!</button>
+    <hr>
+    <br>
+    <h2 onclick="changeHead(this)" ondblclick="changeHead2(this)" class="redHead">Click on this Heading!</h2>
+    <br>
+    <hr>
+    <span id="noBlock">Click the button!</span> 
+    <button onclick="displayDate()">What time is it?</button>
+    <span id="date1"></span>
+    <hr>
+    <h2>Checking Cookies with the onload attribute</h2>
+    <p id="cookies"></p> <!-- check the body tag with onload() attribute -->
+
+    
+    <script src="domEvents.js"></script>
+</body>
+</html>
