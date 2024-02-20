@@ -9,6 +9,10 @@
             background: grey;
             color: rgb(239, 247, 255);
             font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+        h2 {
+            color: #000;
         }
         .redHead {
             border: 1px solid black;
@@ -37,12 +41,8 @@
     </style>
 </head>
 <body onload="checkCookies()">
-    <h1>DOM Events</h1>
-    <button onclick="myFunction()">Click Here!</button>
-    <button onclick="myFunction2()">Delete the Paragraph!</button>
-    <hr>
-    <br>
-    <h2 onclick="changeHead(this)" ondblclick="changeHead2(this)" class="redHead">Click on this Heading!</h2>
+    <h1 style="text-align: center;">DOM Events</h1>
+    <h2 onclick="changeHead(this)" ondblclick="changeHead2(this)" class="redHead" style="color: white;">Click on this Heading!</h2>
     <br>
     <hr>
     <span id="noBlock">Click the button!</span> 
@@ -51,8 +51,37 @@
     <hr>
     <h2>Checking Cookies with the onload attribute</h2>
     <p id="cookies"></p> <!-- check the body tag with onload() attribute -->
-
+    <hr>
+    <h2>The oninput Event</h2>
+    <span>Enter your name here:</span> <input type="text" id="fname" oninput="upperCase()">
+    <p>When you write in the input field, a function is triggered to transform the input to UPPER CASE.</p>
+    <br>
+    <h2>The onchange Event</h2>
+    <span>Enter your name here:</span> <input type="text" id="fname2" onchange="upperCase2()">
+    <p>When you leave the input field, a function transforms the input to UPPER CASE.</p>
+    <br>
+    <h2>The onmouseover and onmouseout attributes</h2>
+    <div onmouseover="mOver(this)" onmouseout="mOveout(this)" style="background: pink; color:blueviolet; height: 40px; width: 120px; padding: 40px;">Mouse Over Me!</div>
+    <br>
+    <hr>
+    <h2>The onmousedown and onmouseup attributes</h2>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: darkcyan; height: 40px; width: 120px; padding: 40px;" >Hold down the mouse click button on me!</div>
+    <hr>
+    <h2>Event Listeners</h2>
+    <p>Many events on the same button</p>
+    <button id="myBtn">Try it!</button>
+    <p id="demo"></p>
+    <hr>
     
+    <h2>Resize the window!</h2>
+    <p id="demo2"></p>
+
+    <br>
+    <hr>
+    <p>If you want to add or delete texts below the buttons, you should click on the button.</p>
+    <button onclick="myFunction()">Add Text!</button>
+    <button onclick="myFunction2()">Delete the Text!</button>
+    <br>
     <script src="domEvents.js"></script>
 </body>
 </html>
