@@ -194,5 +194,25 @@ text += "</ul>";
 function carsFunction(value){
     text += "<li>" + value + "</li>";
 };
-
 //document.getElementById("").innerHTMl = text; */
+
+/* ---------------------------------- Additional Informations ---------------------------------- */
+
+
+let pHello = document.getElementById('hello');
+
+pHello.innerText += ' New world!';
+
+//If we can add the HTML elements to our page via DOM, we need to use .innerHTML like this:
+pHello.innerHTML += ' We can add tag like this <span>"This is the SPAN TAG!!"</span>';
+
+//outerHTML: is allows us to take a look at the element itself. Now we can change the outer tag. 
+pHello.outerHTML = '<h1 id=\"hello\">hello! New world! We can add tag like this. <span>\"This is the SPAN TAG!!\"</span></h1>';
+console.dir( pHello );
+
+//Select the span tag
+let spanH1 = document.querySelectorAll('h1 span'); //it's gonna to return an ARRAY.
+spanH1[0].innerHTML = "new text here!!!"; // we need to use SQUARE BRACKETS to access, because it returns an ARRAY.
+
+//Changing Element Style's --------
+

@@ -29,7 +29,7 @@
         <hr>
         <h3>Targeting DOM Elements</h3>
         <ol>
-            <li>document.getElementById</li>
+            <li>document.getElementById - this is just a <b>Reference to the Object is just a Memory Pointer.</b></li>
             <li>document.getElementsByClassName - if element'S' that means it is gonna be an <b>ARRAY</b>. (Plural)</li>
             <li>document.getElementsByName</li>
             <li>document.getElementsByTagName</li>
@@ -38,19 +38,48 @@
             <li>dir ( document.getElementById('img') ) - that means that the object is printed out as an object in the console.</li>
         </ol>
         <hr>
-        <ol> Targeting with CSS Selector
+        <h4>Targeting with CSS Selector</h4>
+        <ol> 
             <li>document.querySelectorAll( '#hello' ) - it is gonna be an <b>ARRAY</b>.</li>
             <li>document.querySelectorAll( '.pClass' ) - it is gonna be an <b>ARRAY</b>.</li>
             <li>document.querySelectorAll( '#hello, .pClass' ) - it is gonna be an <b>ARRAY</b>.</li>
             <li>document.querySelectorAll( 'p[data-content="123"], body > h1.pClass > span' ) - it targets "< p data-content="123 >" and "< h1 class="pClass" > < span> Hello < /span> < /h1></li>
-            <li></li>
         </ol>
         <hr>
         <h3>Changing Element's Content's</h3>
         <ol> 
+            <li id="hello"> hello!</li>
+            <li>
+                console.dir( document.getElementById('hello') ) - it prints out an interactive list. So we can actually view the object that it actually is.
+            </li>
+            <li>
+                If we want to change the TEXT specifically, then we are going to stick with <b>innerText</b>. <br>
+                document.getElementById('hello').innerText = 'new world!'; or concatenating += 'new world!'
+            </li>
+            <li>
+                We can give it a SYMBOL NAME like this: let pHello = document.getElementById('hello')
+            </li>
+            <li>
+                If we can add the HTML elements to our page via DOM, we need to use .innerHTML like this: <br>
+                pHello.innerHTML += ' We can add tag like this <span>"This is the SPAN TAG!!"</span>';
+            </li>
+            <li>
+                outerHTML: is allows us to take a look at the element itself. Now we can change the outer tag. <br>
+                pHello.outerHTML = '< h1 ...>... < /h1>'; It is changed from p tag to h1 tag.
+            </li>
+            <li>
+                Select the span tag!!! <br>
+                let spanH1 = document.querySelectorAll('h1 span'); //it's gonna to return an ARRAY. <br>
+                spanH1[0].innerHTML = "new text here!!!"; // we need to use SQUARE BRACKETS to access, because it returns an ARRAY.
+            </li>
+        </ol>
+        <hr>
+        <h3>Changing Element Style's</h3>
+        <ol>
             <li></li>
         </ol>
     </section>
+    <hr>
     <script src="/js/index.js"></script>
 </body>
 </html>
