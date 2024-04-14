@@ -216,3 +216,93 @@ spanH1[0].innerHTML = "new text here!!!"; // we need to use SQUARE BRACKETS to a
 
 //Changing Element Style's --------
 
+// When we can write dir( pHello ); on the console and scroll down, we can see the STYLE OBJECT. And inside of the STYLE object, we able to modify all of the style properties.
+
+let el = document.getElementById('style1');
+/*
+el.style.background = 'blue';
+el.style.color = 'white';
+el.style.width = '250px';
+el.style.borderRadius = '12px';
+el.style.padding = '5px'; 
+*/
+
+// We can use more EASY and FAST way like this:
+// this is actually via style attribute is not the computed property
+
+el.style.cssText = 'background:darkblue; color:white; width:250px; border-radius:12px; padding:5px; margin:5px';
+el.style.cssText += 'height:100px';
+
+// !!-- COMPUTED STYLE --!! (it is not inline style)
+/* they are not actual style properties, computed properties come from our CSS files and also the browser defaults.
+console.log(getComputedStyle( el ) );   */
+
+
+
+//Event Handlers --------
+
+//These functions are ananymous. We need to be careful when we add event listener. If we are not going to remove that callback function that callback function doesn't need a NAME. That's why we need a function with a name(to use removeEventListener)
+
+const cars = ["Saab", "Volvo", "BMW", "Audi", "Tesla"];
+
+let select = document.getElementsByName('cars')[0];
+select.onclick = function( event ) {
+    console.log( event )
+};
+
+function ClickCallback( event ) {
+    console.log( 'clicked by addEventListener!' );
+}
+
+select.addEventListener( 'click', ClickCallback );
+
+select.removeEventListener( 'click', ClickCallback );
+
+// (About 'event' parameter) And the reason why is because it populates meaning, it assigns to this parameter the symbol name, an event object and that event object gives is details and information about the event that triggered this callback function. !!! it does not matter event or evt, these are just a name.
+
+let element = document.createElement('div'); // this is just created element but it's not placed inside of DOC.
+
+element.style.cssText = "width:200px; height:200px; background:darkblue; border-radius:12px; margin-top:25px;"
+element.onclick = function(){ alert('this div inserted Before the section (that has an id as introduction).')};
+//document.body.appendChild( element );
+//If we want to add this div specifically we need to use this: 
+
+let target = document.getElementById( 'introduction' );
+
+document.body.insertBefore( element, target );
+
+
+//for div with id (modify)  ------ MINI FINAL PROJECT -----
+
+let elements = document.getElementsByName('cssProperty'); //the array - all of these select dropdown
+
+let introDiv = document.getElementById('modify');
+
+function set(){
+
+    for( let index = 0; index < elements.length; index++ ){
+
+        let cssProperty =  elements[index].getAttribute('id');
+        let cssValue = elements[index].value;
+
+        introDiv.style[ cssProperty ] = cssValue;
+    }
+}
+
+document.getElementById('set').addEventListener('click', set);
+
+/*
+1) We've targeted the button then we have added an eventListener called click, 
+2) When they click on it, it runs the set function 
+3) Then we're creating a variable that stores the array it stores the array(document.getElementsByName('cssProperty');)
+4) Then we're iterating through that ARRAY to TARGET each individual Select Dropdown CSS PROPERTY  and VALUE we want to modify
+5) After that, we go and take a look at each element in the ARRAY with this: elements[index]
+6) And we get it id attribute: .getAttribute('id');
+7) Also we have cssValue, we target each select dropdown(elements): let cssValue = elements[index] 
+8) And then we pull out its VALUE: .value;
+9) Afterward, we grab the DIV element and we've targeted: let introDiv = document.getElementById('modify');
+10) Then we've targeted the style object that associated with the div element: introDiv.style[ cssProperty ]
+11) Finally we set it equal to the value that we have VALUE: = cssValue;
+
+
+*/

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <section>
+    <section id="introduction">
         <h2>Some Infos About DOM</h2>
         <ul>
             <li>
@@ -76,10 +76,69 @@
         <hr>
         <h3>Changing Element Style's</h3>
         <ol>
-            <li></li>
+            <li id="style1"> 
+                This is the element that has an id as 'style1'.
+            </li>
+            <li>
+                When we can write dir( el ); on the console and scroll down, we can see the STYLE OBJECT. And inside of the STYLE object, we able to modify all of the style properties.
+            </li>
+            <li>
+                We can use more easy way like this: <br>
+                let el = document.getElementById('style1'); <br>
+                el.style.cssText = 'background:darkblue; color:white; width:250px; border-radius:12px; padding:5px; margin:5px';
+            </li>
+            <li>
+                When some CSS rules allready applied, then we need to use '+=' like this: <br>
+                el.style.cssText = 'background:darkblue; color:white;' <br> 
+                el.style.cssText += 'width:250px; border-radius:12px;'
+            </li>
+            <li>
+                Computed Style: they are not actual style properties, computed properties come from our CSS files and also the browser defaults. console.log(getComputedStyle( el ) );  
+            </li>
+        </ol>
+        <hr>
+        <h2>Event Handlers</h2>
+        <ol>
+            <li>
+                An event happened.
+            </li>
+            <li>
+                Run a function.
+            </li>
+            <li>
+                <button name="cars">console.log( event )</button>
+            </li>
         </ol>
     </section>
     <hr>
+    <div class="final-project">
+        <select name="cssProperty" id="background">
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Red">Red</option>
+        </select>
+
+        <select name="cssProperty" id="width">
+            <option value="100px">100px</option>
+            <option value="200px">200px</option>
+            <option value="300px">300px</option>
+        </select>
+
+        <select name="cssProperty" id="height">
+            <option value="100px">100px</option>
+            <option value="200px">200px</option>
+            <option value="300px">300px</option>
+        </select>
+
+        <button id="set">Set</button>
+        <br>
+        <br>
+
+        <div id="modify" style="width: 300px; height: 300px; background: blue; border-radius: 12px;">
+
+        </div>
+
+    </div>
     <script src="/js/index.js"></script>
 </body>
 </html>
